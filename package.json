@@ -1,0 +1,41 @@
+{
+  "main": "build/emoji-img.js",
+  "scripts": {
+    "build": "[ -d build ] && rm -rf build; cp -r src build",
+    "start": "npm run build && node .",
+    "cov": "npm run build && istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R spec test/**.spec.js",
+    "test": "npm run build && mocha test/**.spec.js",
+    "prepublish": "npm run build"
+  },
+  "license": "MIT",
+  "name": "emoji-img",
+  "version": "1.0.0",
+  "description": "Emoji images list",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rumkin/emoji-img.git"
+  },
+  "keywords": [
+    "images",
+    "emoji",
+    "apple-emoji",
+    "ios",
+    "typography",
+    "utf-8",
+    "fonts",
+    "emojis",
+    "glyphs"
+  ],
+  "author": "dev@rumk.in",
+  "bugs": {
+    "url": "https://github.com/rumkin/emoji-img/issues"
+  },
+  "homepage": "https://github.com/rumkin/emoji-img#readme",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.0"
+  }
+}
